@@ -1,4 +1,4 @@
-# Autofetch new DNS zones to slave
+## Autofetch new DNS zones to slave
 
 Add to your master bind option:
 
