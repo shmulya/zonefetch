@@ -37,7 +37,7 @@ def new_zonefile(newzones, pathtozonefile, master):
 
     for i in newzones:
         fn = re.search('"\S+"', i).group(0)[1:-1]
-        strng = '%s {\n	type slave;\n	file "db.%s";\n		masters { %s; };\n};\n' % (i, fn, master)
+        strng = '%s {\n	type slave;\n	file "/var/cache/bind/db.%s";\n		masters { %s; };\n};\n' % (i, fn, master)
         reszonestr = reszonestr + strng
     open(pathtozonefile, 'w').write(reszonestr)
     subprocess.call("rndc reload", shell=True)
