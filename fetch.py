@@ -40,7 +40,7 @@ def new_zonefile(newzones, pathtozonefile, master):
         strng = '%s {\n	type slave;\n	file "/var/cache/bind/db.%s";\n		masters { %s; };\n};\n' % (i, fn, master)
         reszonestr = reszonestr + strng
     open(pathtozonefile, 'w').write(reszonestr)
-    subprocess.call("rndc reload", shell=True)
+    subprocess.call("/usr/sbin/rndc reload", shell=True)
 
 
 def __main__():
