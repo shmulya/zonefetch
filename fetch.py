@@ -53,7 +53,7 @@ def __main__():
         if newslave == 'same':
             print 'No new zonefiles'
         else:
-            new_zonefile(newslave, PATH_TO_SLAVE_ZONEFILE+mstr+'.conf', mastr)
+            new_zonefile(newslave, PATH_TO_SLAVE_ZONEFILE+mstr+'.conf', mstr)
 
 
 __main__()
